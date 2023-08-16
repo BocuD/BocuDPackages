@@ -1,28 +1,22 @@
 {
     "name":"Example Listing",
     "id":"com.vrchat.example-listing",
-    "url":"https://vrchat-community.github.io/template-package-listing/index.json",
+    "url":"https://BocuD.github.io/BocuDPackages/index.json",
     "author":{
-        "email":"developer@vrchat.com",
+        "email":"",
         "name":"VRChat",
-        "url":"https://hello.vrchat.com"
+        "url":"https://github.com/BocuD"
     },
-    "description":"Example listing of VRChat packages",
+    "description":"BocuD's VPM Package Listing",
     "infoLink":{
-        "url":"http://github.com/vrchat-community/template-package-listing",
-        "text":"View on GitHub"
+        "url":"https://discord.gg/XEwPkTr5",
+        "text":"Join Discord"
     },
     "bannerUrl":"banner.png",
     "githubRepos":[
-        "vrchat-community/clientsim"
+        "BocuD/VRBuildHelper",
+        "BocuD/VRChatApiTools"
     ],
     "packages":[
-        {
-            "name":"com.vrchat.udonsharp",
-            "releases":[
-                "https://github.com/vrchat-community/UdonSharp/releases/download/1.1.7/com.vrchat.UdonSharp.zip",
-                "https://github.com/vrchat-community/UdonSharp/releases/download/1.1.6/com.vrchat.UdonSharp-1.1.6.zip"
-            ]
-        }
     ]
 }
