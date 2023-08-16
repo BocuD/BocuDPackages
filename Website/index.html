@@ -216,5 +216,25 @@
     {{~ end; ~}}
   </div>
   <script type="module" src="app.js"></script>
+
+  <script>
+    fetch("bg/images.json")
+      .then(response => response.json())
+      .then(images => {
+        const randomIndex = Math.floor(Math.random() * images.length);
+        const randomImage = images[randomIndex];
+
+        // Encode the filename before using it in the URL
+        const encodedFilename = encodeURIComponent(randomImage.filename);
+
+        const imgElement = document.getElementById("randomImage");
+        
+        // Construct the image source URL using the encoded filename
+        const url = `/bg/${encodedFilename}`;
+
+        document.body.style.backgroundImage = `url(${url})`
+      })
+      .catch(error => console.error("Error loading images.json:", error));
+  </script>
 </body>
 </html>

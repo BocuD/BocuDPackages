@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Image Display</title>
+<style>
+  body {
+    position: relative; /* Set the body as the positioning context */
+    margin: 0;
+    height: 100vh;
+  }
+  #randomImage {
+    position: absolute; /* Position the image absolutely within the body */
+    bottom: 0; /* Align the image to the bottom */
+    left: 0; /* Align the image to the left */
+    max-width: 100%;
+    max-height: 100%;
+  }
+</style>
+</head>
+<body>
+  <img id="randomImage" src="" alt="Random Image">
+  
+  <script>
+    fetch("images.json")
+      .then(response => response.json())
+      .then(images => {
+        const randomIndex = Math.floor(Math.random() * images.length);
+        const randomImage = images[randomIndex];
+
+        // Encode the filename before using it in the URL
+        const encodedFilename = encodeURIComponent(randomImage.filename);
+
+        const imgElement = document.getElementById("randomImage");
+        
+        // Construct the image source URL using the encoded filename
+        imgElement.src = `http://nesys.taito.co.jp/bg/${encodedFilename}`;
+
+        Document.body.style.backgroundImage = `url(${encodedFilename})`
+      })
+      .catch(error => console.error("Error loading images.json:", error));
+  </script>
+</body>
+</html>

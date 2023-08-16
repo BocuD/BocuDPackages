@@ -16,6 +16,9 @@ body {
   justify-content: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--neutral-foreground-rest);
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  background-size: cover; /* Ensure background image covers the entire viewport */
+  background-position: bottom left; /* Adjust as needed */
 }
 
 .hidden {
