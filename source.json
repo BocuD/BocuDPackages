@@ -1,13 +1,13 @@
 {
-    "name":"Example Listing",
-    "id":"com.vrchat.example-listing",
+    "name":"BocuD's VPM Package Listing",
+    "id":"com.bocud.vpm-listing",
     "url":"https://BocuD.github.io/BocuDPackages/index.json",
     "author":{
         "email":"",
-        "name":"VRChat",
+        "name":"BocuD",
         "url":"https://github.com/BocuD"
     },
-    "description":"BocuD's VPM Package Listing",
+    "description":"Mainly editor tools to improve the workflow for VRChat creators",
     "infoLink":{
         "url":"https://discord.gg/XEwPkTr5",
         "text":"Join Discord"
